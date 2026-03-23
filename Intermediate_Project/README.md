@@ -2,47 +2,47 @@
 
 ## Description
 
-This project aims to predict the State of Health (SOH) of electric vehicle (EV) batteries using machine learning techniques. Battery health is a critical factor that affects the performance, efficiency, and lifespan of EVs. By analyzing battery parameters such as voltage, current, temperature, and charge cycles, this project identifies patterns in battery degradation and builds a predictive model.
+This project focuses on predicting the health of electric vehicle (EV) batteries using machine learning techniques. The objective is to analyze key battery parameters such as ambient temperature, internal resistance (Re, Rct), and other features to estimate battery capacity, which represents the battery’s State of Health (SOH).
 
 ## Dataset
 
-* **Source:** NASA Battery Dataset / Kaggle EV datasets
-* **Description:** The dataset contains battery-related features such as voltage, current, temperature, cycle count, capacity, internal resistance, and charging time. These variables are used to analyze battery behavior and predict its health.
+* **Source:** NASA Battery Dataset / Kaggle
+* **Description:** The dataset contains battery-related parameters such as ambient temperature, resistance values (Re, Rct), and battery capacity. These features help in understanding battery degradation and performance.
 
 ## Steps Performed
 
 ### 1. Data Cleaning
 
-* Checked for missing values and handled them appropriately
-* Removed duplicate records
-* Converted data into suitable formats
-* Normalised/standardised features if required
+* Removed missing values
+* Selected relevant numeric features
+* Eliminated unnecessary columns such as IDs and filenames
 
 ### 2. Exploratory Data Analysis (EDA)
 
 * Analyzed dataset structure using `.info()` and `.describe()`
-* Studied relationships between variables
-* Identified trends in battery degradation
+* Identified relationships between variables
 
-### 3. Visualization
+### 3. Data Visualization
 
-* Plotted histograms to understand data distribution
-* Used scatter plots to analyze relationships (e.g., cycle count vs capacity)
-* Created correlation heatmaps to identify important features
-* Used box plots to detect outliers
+* Used histograms to study data distribution
+* Created correlation heatmap to identify relationships
+* Plotted scatter plots to analyze feature vs capacity relationships
 
 ### 4. Model Building
 
-* Applied regression techniques (e.g., Linear Regression)
+* Applied **Linear Regression** to predict battery capacity
+* Selected key features: ambient_temperature, Re, Rct
 * Split data into training and testing sets
-* Trained the model using battery features
-* Evaluated performance using metrics such as MAE, MSE, and RMSE
 
 ## Results
 
-* Successfully identified key factors affecting battery degradation
-* Built a regression model to predict battery health (SOH)
-* Observed that features like cycle count, temperature, and voltage significantly influence battery performance
+* The model successfully predicted battery capacity using regression
+* Observed that **Rct has a strong negative correlation with battery capacity**, indicating battery degradation
+* Model performance evaluated using:
+
+  * Mean Absolute Error (MAE)
+  * Mean Squared Error (MSE)
+  * R² Score
 
 ## Tools Used
 
@@ -55,7 +55,7 @@ This project aims to predict the State of Health (SOH) of electric vehicle (EV) 
 
 ## Conclusion
 
-This project demonstrates that machine learning can effectively predict battery health using historical data. The model helps in understanding degradation patterns and can be used in real-world battery management systems to improve performance, reduce maintenance costs, and enhance battery lifespan.
+This project demonstrates that machine learning techniques can effectively predict battery health using key parameters. The analysis shows that internal resistance plays a major role in battery degradation. This approach can be useful in real-world battery management systems to improve performance and lifespan.
 
 ## Author
 
