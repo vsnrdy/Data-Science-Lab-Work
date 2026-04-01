@@ -1,6 +1,6 @@
 # EV Battery Health Prediction using Machine Learning
 
-## Description
+# Description
 
 This project focuses on predicting the health of electric vehicle (EV) batteries using machine learning techniques. The objective is to analyze key battery parameters such as ambient temperature, internal resistance (Re, Rct), and other features to estimate battery capacity, which represents the battery’s State of Health (SOH).
 
